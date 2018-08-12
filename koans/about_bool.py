@@ -21,7 +21,7 @@ def test_python_can_calculate_bool_expressions():
     """
         Python может проверять, является выражение истиной или ложью
     """
-    assert 3 > 2 == _____  # "3 > 2" – это верно (True) или ложно (False)?
+    assert (3 > 2) == _____  # "3 > 2" – это верно (True) или ложно (False)?
 
 
 def test_can_assign_bool_expressions_to_variable():
@@ -66,5 +66,5 @@ def test_can_assign_equality_check_to_variable():
     """
         Результат сравнения можно записывать в переменную.
     """
-    a = 3 + 2 == 1 + __
-    assert a == ______
+    a = 3 + 2 == 1 + 4
+    assert a == __
