@@ -149,29 +149,16 @@ def test_string_empty():
 
 def test_string_compare():
     """
-        Строки можно сравнивать по значению, а можно — по идентификатору объекта, который представляет строку.
+        Строки можно сравнивать, сравнение производится в лексикографическом порядке.
     """
     str1 = 'Hello, world!'
     str2 = 'Hello, ' + 'world!'
 
-    string_ids_compare = str1 == str2
-    assert string_ids_compare == __
+    string_compare = str1 == str2
+    assert string_compare == __
 
-    string_ids_compare = id(str1) == id(str2)
-    assert string_ids_compare == __
+    string_compare = 'AAA' < 'AAB'
+    assert string_compare == __
 
-
-def test_string_copy():
-    """
-        Строки копируются по ссылке, но при этом неизменяемы. При попытке изменения строки создается новая строка
-    """
-    str1 = 'Hello, world!'
-    str2 = str1
-    string_ids_compare = id(str1) == id(str2)
-
-    assert string_ids_compare == __
-
-    str2 += '!'
-    string_ids_compare = id(str1) == id(str2)
-
-    assert string_ids_compare == __
+    string_compare = 'aAA' < 'AAB'
+    assert string_compare == __
