@@ -4,20 +4,30 @@ from koans_plugs import *
 def test_slice_with_index():
     """
         Срез можно получить, обратившись к одному символу строки по его номеру
-        (индексу)
+        (индексу). Важно помнить, что нумерация начинается с 0
     """
-    str1= "Python anywhere"
+    str1 = "Python anywhere"
 
-    assert srt[7] = ___
+    assert srt[2] = ___
+
+
+def test_slice_with_index_minus_one():
+    """
+        Если задать индекс со значением -1, то мы получим срез с последним символом строки
+    """
+
+    str1 = "Python anywhere"
+
+    assert srt[-1] = ___
 
 
 def test_slice_with_negative_index():
     """
-        Если задать отрицательный индекс, то номер символа будет отсчитываться с
+        Если задать любой другой отрицательный индекс, то номер символа будет отсчитываться с
         конца, начиная с -1
     """
 
-    str1= "Python anywhere"
+    str1 = "Python anywhere"
 
     assert srt[-4] = ___
 
@@ -26,11 +36,12 @@ def test_slice_with_substring():
     """
         Для среза подстроки нужно указать два параметра (индекса) - начала и конца фрагмента
 
-        Срез берется до символа с индексом второго параметра, а значит он в
-        подстроку не включается
+        Например, str1 = 'Hello'. Для среза подстроки от первого до четвертого символа необходимо
+        задать два параметра, прописав их через двоеточие. str1[1:4] = 'ell'
+        Символ с индексом первого (левого) параметра в подстроку включается, а второго (правого)  - нет
     """
 
-    str1= "Python anywhere"
+    str1 = "Python anywhere"
 
     assert srt[2:9] = ___
 
@@ -50,7 +61,7 @@ def test_slice_end_of_string():
         Можно опустить второй параметр и взять срез до конца строки
     """
 
-    str1= "Python anywhere"
+    str1 = "Python anywhere"
 
     assert srt[3:] = ___
 
@@ -59,12 +70,22 @@ def test_slice_beginning_of_string():
     """
         Аналогично, можно опустить первый параметр и взять срез от начала строки
 
+    """
+
+    str1 = "Python anywhere"
+
+    assert srt[:5] = ___
+
+
+def test_slice_with_equal_substring():
+    """
         Если опустить оба параметра, оставив двоеточие, то срез совпадет с данной строкой
     """
 
-    str1= "Python anywhere"
+    str1 = "Python anywhere"
 
-    assert srt[:5] = ___
+    assert srt[:] = ___
+
 
 
 def test_slice_with_step():
@@ -75,7 +96,7 @@ def test_slice_with_step():
         но str1[2:6] можно перписать как str[2:6:1]
     """
 
-    str1= "Python anywhere"
+    str1 = "Python anywhere"
 
     assert srt[1:9:2] = ___
 
