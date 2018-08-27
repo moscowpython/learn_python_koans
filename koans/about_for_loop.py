@@ -37,7 +37,7 @@ def test_for_loop_with_list:
     list1 = [5]
 
     for number in list1:
-        assert number = ___
+        assert number == ___
 
 
 def test_for_loop_with_range():
