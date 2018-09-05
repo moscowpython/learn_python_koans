@@ -112,3 +112,14 @@ def test_duplicate_removal():
     my_duplicated_list = ['cow', 'cat', 'cat', 'dog', 'cat', 'cow']
     my_list = ___
     assert sorted(my_list) == sorted(list(set(my_duplicated_list)))
+
+
+def test_list_in_set():
+    """
+        Множество содержит в себе набор уникальных элементов. Их уникальность определяется специальной функцией __hash__,
+        содержащейся в типе данных. Проверить наличие данной функции можно командой hash().
+
+        Если у типа нет функции, то при добавлении в множество будет вызванно исключение.
+    """
+    my_set = ___  # попробуйте такие варианты: {1, [1, 2, 3]}, {1, (1, 2, 3)}
+    assert isinstance(my_set, set)
