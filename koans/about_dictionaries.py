@@ -1,4 +1,4 @@
-from helpers.comparators import dict_comparator
+from koans.helpers.comparators import dict_comparator
 from koans_plugs import *
 
 
@@ -41,7 +41,7 @@ def test_get_value_by_key():
         'a': 1,
         'b': 2
     }
-    assert d['a'] == _____ # попробуйте такие варианты: False, True, 1, 2
+    assert d['a'] == _____  # попробуйте такие варианты: False, True, 1, 2
 
 
 def test_add_key_and_value_to_dictionary():
@@ -50,7 +50,7 @@ def test_add_key_and_value_to_dictionary():
     """
     d = {
         'a': 1,
-        'b': 2
+        'b': 2,
     }
     d['c'] = 3
 
@@ -80,7 +80,7 @@ def test_if_not_existing_key_in_dict():
     }
     var = 'c' in d
 
-    assert var == ___ # попробуйте такие варианты: False, True, 1, 2
+    assert var == ___  # попробуйте такие варианты: False, True, 1, 2
 
 
 def test_get_method():
@@ -106,4 +106,4 @@ def test_get_method_default_value():
     }
     var = d.get('c')
 
-    assert var == ___ # попробуйте такие варианты: False, True, 1, 2, 0, None
+    assert var == ___  # попробуйте такие варианты: False, True, 1, 2, 0, None

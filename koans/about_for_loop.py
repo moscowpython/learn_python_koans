@@ -25,7 +25,7 @@ def test_for_loop():
         assert letter == ___
 
 
-def test_for_loop_with_list:
+def test_for_loop_with_list():
     """
         Цикл for может проходить не только по строкам, но и по спискам и кортежам
         Например, для list1 = [2, 4, 6] цикл
