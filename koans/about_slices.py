@@ -8,7 +8,7 @@ def test_slice_with_index():
     """
     str1 = "Python anywhere"
 
-    assert srt[2] == ___
+    assert str1[2] == ___
 
 
 def test_slice_with_index_minus_one():
@@ -18,7 +18,7 @@ def test_slice_with_index_minus_one():
 
     str1 = "Python anywhere"
 
-    assert srt[-1] == ___
+    assert str1[-1] == ___
 
 
 def test_slice_with_negative_index():
@@ -29,7 +29,7 @@ def test_slice_with_negative_index():
 
     str1 = "Python anywhere"
 
-    assert srt[-4] == ___
+    assert str1[-4] == ___
 
 
 def test_slice_with_substring():
@@ -43,7 +43,7 @@ def test_slice_with_substring():
 
     str1 = "Python anywhere"
 
-    assert srt[2:9] == ___
+    assert str1[2:9] == ___
 
 
 def test_slice_with_diff_indexes():
@@ -63,7 +63,7 @@ def test_slice_end_of_string():
 
     str1 = "Python anywhere"
 
-    assert srt[3:] == ___
+    assert str1[3:] == ___
 
 
 def test_slice_beginning_of_string():
@@ -74,7 +74,7 @@ def test_slice_beginning_of_string():
 
     str1 = "Python anywhere"
 
-    assert srt[:5] == ___
+    assert str1[:5] == ___
 
 
 def test_slice_with_equal_substring():
@@ -84,8 +84,7 @@ def test_slice_with_equal_substring():
 
     str1 = "Python anywhere"
 
-    assert srt[:] == ___
-
+    assert str1[:] == ___
 
 
 def test_slice_with_step():
@@ -98,13 +97,14 @@ def test_slice_with_step():
 
     str1 = "Python anywhere"
 
-    assert srt[1:9:2] == ___
+    assert str1[1:9:2] == ___
+
 
 def test_slice_string_backwards():
     """
         Если задать шаг -1, то символы будут идти в обратном порядке
     """
 
-    srt1 = "Python anywhere"
+    str1 = "Python anywhere"
 
-    assert srt[::-1] == ___
+    assert str1[::-1] == ___
