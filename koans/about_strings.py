@@ -1,7 +1,7 @@
 from koans_plugs import *
 
 
-def test_string_indeces():
+def test_string_indexes():
     """
         В строке можно обращаться к отдельным символам
     """
