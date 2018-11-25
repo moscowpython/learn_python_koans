@@ -14,7 +14,7 @@ def test_start_if():
     assert a == 3
 
 
-def test_if_and_ekse():
+def test_if_and_else():
     """
         Использование конструкции if и else
     """
