@@ -5,20 +5,23 @@ def test_create():
     """
         Множество в python содержат не повторяющиеся элементы.
 
-        Создать множество можно через функцию set или {1, 2, 3}.
+        Создать множество можно через функцию set(), передав в неё любую последовательность,
+        или заключив последовательность в фиурные скобки {1, 2, 3}.
 
         P.S пустое множество невозможно создать как {}, так-как синтаксис совпадёт с созданием словаря.
     """
 
-    my_set =  ___  # попробуйте такие варианты: set(), {1, 2, 3}, {'qwerty'}
+    my_set =  ___  # попробуйте такие варианты: set(), {1, 2, 3}, {'qwerty'}, set((1, 2, 3))
     assert isinstance(my_set, set)
 
 
 def test_create_from_string():
     """
-        При создании множества все элементы будут уникальными
+        При создании множества все элементы будут уникальными.
+        Создать множество уникальных букв из строки легко через функцию set():
 
-        set('qwerty') == {'q', 'w', 'e', 'r', 't', 'y'}
+        >>> set('qwerty') == {'q', 'w', 'e', 'r', 't', 'y'}
+        True
     """
     my_set = ___  # попробуйте такие варианты: set('Hello!'), set('Hello, world!')
     assert {'H', 'e', 'l', 'o', 'w', 'r', 'd', '!', ',', ' '} == my_set
@@ -39,7 +42,7 @@ def test_operator_len():
         len({"Множество"})
     """
     my_set = {0, 1, 2, 3, 4, 5}
-    set_len = ___  # попробуйте такие варианты: 3, 5, 6
+    set_len = ___  # попробуйте такие варианты: 5, 6, 7
     assert len(my_set) == set_len
 
 
@@ -62,8 +65,8 @@ def test_union():
     """
     set_A = {1, 2, 3, 4, 5}
     set_B = {4, 5, 6, 7, 8}
-    set_union = ___
-    assert set_union == set_A | set_B
+    set_union = set_A | set_B
+    assert set_union == ___
 
 
 def test_intersection():
@@ -74,8 +77,8 @@ def test_intersection():
     """
     set_A = {1, 2, 3, 4, 5}
     set_B = {4, 5, 6, 7, 8}
-    set_intersection = ___
-    assert set_intersection == set_A & set_B
+    set_intersection = set_A & set_B
+    assert set_intersection == ___
 
 
 def test_difference():
@@ -86,8 +89,8 @@ def test_difference():
     """
     set_A = {1, 2, 3, 4, 5}
     set_B = {4, 5, 6, 7, 8}
-    set_difference = ___
-    assert set_difference == set_A - set_B
+    set_difference = set_A - set_B
+    assert set_difference == ___
 
 
 def test_multi_difference():
@@ -99,19 +102,26 @@ def test_multi_difference():
     set_A = {1, 2, 3, 4, 5}
     set_B = {4, 5, 6, 7, 8}
     set_C = {1, 2}
-    set_difference = ___
-    assert set_difference == set_A - set_B - set_C
+    set_difference = set_A - set_B - set_C
+    assert set_difference == ___
 
 
 def test_duplicate_removal():
     """
-        Очень часто множества используют для удаления дублей из списка путём преобразования
+        Очень часто множества используют для удаления дублей из списка путём преобразования.
 
-        "Список уникальных элементов" = list(set("Список элементов"))
+        "Список уникальных элементов" = list(set("Список элементов")).
+        Здесь важно применить сортировку к спискам перед сравнением, функцией sorted().
+        Иначе легко проверить, что для сравнения списков учитывается порядок эл-тов.
+
+        >>> [1, 2] == [1, 2]
+        True
+        >>> [1, 2] != [2, 1]
+        True
     """
     my_duplicated_list = ['cow', 'cat', 'cat', 'dog', 'cat', 'cow']
-    my_list = ___
-    assert sorted(my_list) == sorted(list(set(my_duplicated_list)))
+    my_unique_list = ___  # исключите дубликаты вручную
+    assert sorted(my_unique_list) == sorted(list(set(my_duplicated_list)))
 
 
 def test_list_in_set():
@@ -121,5 +131,5 @@ def test_list_in_set():
 
         Если у типа нет функции, то при добавлении в множество будет вызванно исключение.
     """
-    my_set = ___  # попробуйте такие варианты: {1, [1, 2, 3]}, {1, (1, 2, 3)}
+    my_set = ___  # попробуйте такие варианты: {1, [1, 2, 3]}, {1, (1, 2, 3)}, {1, {'a': 1, 'b': 2}}
     assert isinstance(my_set, set)
