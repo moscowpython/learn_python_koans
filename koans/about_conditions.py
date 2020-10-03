@@ -86,5 +86,5 @@ def test_logic():
     """
     names = ['Вова', 'Леша', 'Лена', 'Света']
     name = "Вова"
-    if __ in __:
+    if __ in ____:
         assert True
