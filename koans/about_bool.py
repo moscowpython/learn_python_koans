@@ -5,7 +5,7 @@ def test_has_true_literal():
     """
         У логического типа есть литерал, обозначающий истину
     """
-    a = _____  # попробуйте такие варианты: TRUE, true, True
+    a = True  # попробуйте такие варианты: TRUE, true, True
     assert a
 
 
@@ -13,7 +13,7 @@ def test_has_false_literal():
     """
         У логического типа есть литерал, обозначающий ложь
     """
-    a = _____  # попробуйте такие варианты: FALSE, false, False
+    a = False  # попробуйте такие варианты: FALSE, false, False
     assert not a
 
 
@@ -21,7 +21,7 @@ def test_python_can_calculate_bool_expressions():
     """
         Python может проверять, является выражение истиной или ложью
     """
-    assert (3 > 2) == _____  # "3 > 2" – это верно (True) или ложно (False)?
+    assert (3 > 2) == True  # "3 > 2" – это верно (True) или ложно (False)?
 
 
 def test_can_assign_bool_expressions_to_variable():
