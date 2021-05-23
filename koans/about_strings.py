@@ -7,7 +7,7 @@ def test_string_indexes():
     """
     str1 = 'Hello, world!'
 
-    assert str1[5] == __
+    assert str1[5] == ','
 
 
 def test_string_slice():
@@ -16,7 +16,7 @@ def test_string_slice():
     """
     str1 = 'Hello, world!'
 
-    assert str1[5:9] == __
+    assert str1[5:9] == ', wo'
 
 
 def test_string_for():
@@ -29,7 +29,7 @@ def test_string_for():
     for symbol in str1:
         symbol_count += 1
 
-    assert symbol_count == __
+    assert symbol_count == 13
 
 
 def test_string_add():
@@ -38,7 +38,7 @@ def test_string_add():
     """
     str1 = 'Hello, ' + 'world!'
 
-    assert str1 == __
+    assert str1 == 'Hello, world!'
 
 
 def test_string_add_extra():
@@ -48,7 +48,7 @@ def test_string_add_extra():
     str1 = 'Hello, '
     str1 += 'world!'
 
-    assert str1 == __
+    assert str1 == 'Hello, world!'
 
 
 def test_string_convert_int():
@@ -57,7 +57,7 @@ def test_string_convert_int():
     """
     str1 = str(123)
 
-    assert str1 == __
+    assert str1 == '123'
 
 
 def test_string_add_int():
@@ -66,7 +66,7 @@ def test_string_add_int():
     """
     str1 = 'Hello, ' + str(123)
 
-    assert str1 == __
+    assert str1 == 'Hello, 123'
 
 
 def test_string_len():
@@ -75,7 +75,7 @@ def test_string_len():
     """
     str1 = len('Hello, ')
 
-    assert str1 == __
+    assert str1 == 7
 
 
 def test_string_split():
@@ -85,7 +85,7 @@ def test_string_split():
     str1 = 'Hello, world! Hello, everyone!'
     splited_str = str1.split(' ')
 
-    assert [__, __, __, __] == splited_str
+    assert ['Hello,', 'world!', 'Hello,', 'everyone!'] == splited_str
 
 
 def test_string_join():
@@ -94,7 +94,7 @@ def test_string_join():
     """
     str1 = '! '.join(['Hello', 'world', 'Hello', 'everyone'])
 
-    assert str1 == __
+    assert str1 == 'Hello! world! Hello! everyone'
 
 
 def test_string_methods():
@@ -102,11 +102,11 @@ def test_string_methods():
         У строки есть методы для приведения некоторых ее символов в разные регистры
     """
 
-    assert __ == 'hello'.capitalize()
-    assert __ == 'hello'.upper()
-    assert __ == 'Hello World'.lower()
-    assert __ == 'hello world'.title()
-    assert __ == 'HeLlo wORld'.swapcase()
+    assert 'Hello' == 'hello'.capitalize()
+    assert 'HELLO' == 'hello'.upper()
+    assert 'hello world' == 'Hello World'.lower()
+    assert 'Hello World' == 'hello world'.title()
+    assert 'hElLO WorLD' == 'HeLlo wORld'.swapcase()
 
 
 def test_string_in():
@@ -118,7 +118,7 @@ def test_string_in():
     find_in_str1 = 'world' in str1
 
 
-    assert find_in_str1 == __
+    assert find_in_str1 == True
 
 
 def test_string_format():
@@ -129,7 +129,7 @@ def test_string_format():
     str1 = 'Hello, {}! {}'
     str2 = str1.format(123, 'Hello')
 
-    assert str2 == __
+    assert str2 == 'Hello, 123! Hello'
 
 
 def test_string_empty():
@@ -141,10 +141,10 @@ def test_string_empty():
     str3 = 'hello'
 
     empty_string = not str1
-    assert empty_string == __
+    assert empty_string == True
 
     empty_string = str1 or str2 or not str3
-    assert empty_string == __
+    assert empty_string == False
 
 
 def test_string_compare():
@@ -155,10 +155,10 @@ def test_string_compare():
     str2 = 'Hello, ' + 'world!'
 
     string_compare = str1 == str2
-    assert string_compare == __
+    assert string_compare == True
 
     string_compare = 'AAA' < 'AAB'
-    assert string_compare == __
+    assert string_compare == True
 
     string_compare = 'aAA' < 'AAB'
-    assert string_compare == __
+    assert string_compare == False
