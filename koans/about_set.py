@@ -11,7 +11,7 @@ def test_create():
         P.S пустое множество невозможно создать как {}, так-как синтаксис совпадёт с созданием словаря.
     """
 
-    my_set =  ___  # попробуйте такие варианты: set(), {1, 2, 3}, {'qwerty'}, set((1, 2, 3))
+    my_set =  set()  # попробуйте такие варианты: set(), {1, 2, 3}, {'qwerty'}, set((1, 2, 3))
     assert isinstance(my_set, set)
 
 
@@ -23,7 +23,7 @@ def test_create_from_string():
         >>> set('qwerty') == {'q', 'w', 'e', 'r', 't', 'y'}
         True
     """
-    my_set = ___  # попробуйте такие варианты: set('Hello!'), set('Hello, world!')
+    my_set = set('Hello, world!')  # попробуйте такие варианты: set('Hello!'), set('Hello, world!')
     assert {'H', 'e', 'l', 'o', 'w', 'r', 'd', '!', ',', ' '} == my_set
 
 
@@ -31,7 +31,7 @@ def test_words_in_set():
     """
         Множества могут содержать не только цифры и буквы.
     """
-    my_set = ___  # попробуйте такие варианты: {True, 'set', 2}, {'cow', 'fox', 'cat'}
+    my_set = {True, 'set', 2}  # попробуйте такие варианты: {True, 'set', 2}, {'cow', 'fox', 'cat'}
     assert isinstance(my_set, set)
 
 
@@ -42,7 +42,7 @@ def test_operator_len():
         len({"Множество"})
     """
     my_set = {0, 1, 2, 3, 4, 5}
-    set_len = ___  # попробуйте такие варианты: 5, 6, 7
+    set_len = 6  # попробуйте такие варианты: 5, 6, 7
     assert len(my_set) == set_len
 
 
@@ -53,7 +53,7 @@ def test_operator_in():
         "Элемент" in {"Множество"}
     """
     my_set = {'cow', 'fox', 'cat'}
-    current_element = ___  # попробуйте такие варианты: 'cow', 1, True
+    current_element = 'cow'  # попробуйте такие варианты: 'cow', 1, True
     assert current_element in my_set
 
 
@@ -66,7 +66,7 @@ def test_union():
     set_A = {1, 2, 3, 4, 5}
     set_B = {4, 5, 6, 7, 8}
     set_union = set_A | set_B
-    assert set_union == ___
+    assert set_union == {1, 2, 3, 4, 5, 6, 7, 8}
 
 
 def test_intersection():
@@ -78,7 +78,7 @@ def test_intersection():
     set_A = {1, 2, 3, 4, 5}
     set_B = {4, 5, 6, 7, 8}
     set_intersection = set_A & set_B
-    assert set_intersection == ___
+    assert set_intersection == {4, 5}
 
 
 def test_difference():
@@ -90,7 +90,7 @@ def test_difference():
     set_A = {1, 2, 3, 4, 5}
     set_B = {4, 5, 6, 7, 8}
     set_difference = set_A - set_B
-    assert set_difference == ___
+    assert set_difference == {1, 2, 3}
 
 
 def test_multi_difference():
@@ -103,7 +103,7 @@ def test_multi_difference():
     set_B = {4, 5, 6, 7, 8}
     set_C = {1, 2}
     set_difference = set_A - set_B - set_C
-    assert set_difference == ___
+    assert set_difference == {3}
 
 
 def test_duplicate_removal():
@@ -120,7 +120,7 @@ def test_duplicate_removal():
         True
     """
     my_duplicated_list = ['cow', 'cat', 'cat', 'dog', 'cat', 'cow']
-    my_unique_list = ___  # исключите дубликаты вручную
+    my_unique_list = ['cow', 'cat', 'dog']  # исключите дубликаты вручную
     assert sorted(my_unique_list) == sorted(list(set(my_duplicated_list)))
 
 
@@ -131,5 +131,5 @@ def test_list_in_set():
 
         Если у типа нет функции, то при добавлении в множество будет вызванно исключение.
     """
-    my_set = ___  # попробуйте такие варианты: {1, [1, 2, 3]}, {1, (1, 2, 3)}, {1, {'a': 1, 'b': 2}}
+    my_set = {1, (1, 2, 3)}  # попробуйте такие варианты: {1, [1, 2, 3]}, {1, (1, 2, 3)}, {1, {'a': 1, 'b': 2}}
     assert isinstance(my_set, set)
