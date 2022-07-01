@@ -9,7 +9,7 @@ def test_can_assign_to_variable():
     """
     a = 12
 
-    assert a + 3 == __
+    assert a + 3 == 15
 
 
 def test_can_assign_different_types():
@@ -22,7 +22,7 @@ def test_can_assign_different_types():
     a = 5.5
     a = 'Hello'
 
-    assert a == __
+    assert a == 'Hello'
 
 
 def test_variables_names_are_case_sensitive():
@@ -35,8 +35,8 @@ def test_variables_names_are_case_sensitive():
     a = 12
     A = 5.5
 
-    assert a == __
-    assert A == __
+    assert a == 12
+    assert A == 5.5
 
 
 def test_variables_names_can_have_digits():
@@ -47,7 +47,7 @@ def test_variables_names_can_have_digits():
         но может им заканчиваться или иметь число посередине.
     """
     value2var = 22
-    assert value2var / 2 == __
+    assert value2var / 2 == 11
 
 
 def test_variables_names_can_have_underscore():
@@ -58,4 +58,4 @@ def test_variables_names_can_have_underscore():
          одно от другого.
     """
     max_students_mount = 50
-    assert max_students_mount / 10 == __
+    assert max_students_mount / 10 == 5
