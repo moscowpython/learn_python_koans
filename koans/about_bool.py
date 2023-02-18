@@ -32,7 +32,7 @@ def test_can_assign_bool_expressions_to_variable():
         истинно выражение или ложно.
     """
     a = 3 < 2
-    assert a == _____
+    assert a == False
 
 
 def test_assert_accepts_bool():
@@ -41,7 +41,7 @@ def test_assert_accepts_bool():
 
         Если в bool записана истина, то всё работает.
     """
-    a = 3 < __  # укажите любое число, чтобы в a было True
+    a = 3 < 5  # укажите любое число, чтобы в a было True
     assert a
 
 
@@ -50,7 +50,7 @@ def test_can_use_not():
         not превращает True в False, а False в True.
     """
     a = True
-    assert not a == _____
+    assert not a == False
 
 
 def test_can_use_equality_check():
@@ -59,7 +59,7 @@ def test_can_use_equality_check():
 
         Иначе возвращает False.
     """
-    assert 3 + 2 == 1 + __
+    assert 3 + 2 == 1 + 4
 
 
 def test_can_assign_equality_check_to_variable():
@@ -67,4 +67,4 @@ def test_can_assign_equality_check_to_variable():
         Результат сравнения можно записывать в переменную.
     """
     a = 3 + 2 == 1 + 4
-    assert a == __
+    assert a == True
