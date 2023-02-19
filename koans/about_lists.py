@@ -10,7 +10,7 @@ def test_create_list_with_literal():
 
     my_list = ['Hello', 'world'] 
     
-    assert my_list == ___ # попробуйте ввести такие варианты: list(), ['Hello', 'world'], {'Hello'}
+    assert my_list == ['Hello', 'world'] # попробуйте ввести такие варианты: list(), ['Hello', 'world'], {'Hello'}
 
 
 def test_create_list_with_constructor():
@@ -23,7 +23,7 @@ def test_create_list_with_constructor():
 
     my_list = list('Hello, world!') 
 
-    assert my_list == ___('Hello, world!') # попробуйте ввести такие варианты: dict, list, set
+    assert my_list == list('Hello, world!') # попробуйте ввести такие варианты: dict, list, set
 
 
 def test_list_index():
@@ -36,7 +36,7 @@ def test_list_index():
 
     my_list = ['Hello', 'world', '!']
 
-    assert my_list[2] == ___
+    assert my_list[2] == '!'
 
 
 def test_add_item_to_list():
@@ -50,7 +50,7 @@ def test_add_item_to_list():
     my_list = ['Hello', 'world']
     my_list.append('!')
 
-    assert my_list == ___ # попробуйте ввести такие варианты: ['Hello world!'], ['Hello', 'world!'], ['Hello', 'world', '!']
+    assert my_list == ['Hello', 'world', '!'] # попробуйте ввести такие варианты: ['Hello world!'], ['Hello', 'world!'], ['Hello', 'world', '!']
 
 
 def test_operator_len():
@@ -62,7 +62,7 @@ def test_operator_len():
 
     my_list = ['Learn', 'Python']
 
-    list_len = ___ # попробуйте ввести такие варианты: 2, 3, 4
+    list_len = 2 # попробуйте ввести такие варианты: 2, 3, 4
 
     assert len(my_list) == list_len
 
@@ -78,7 +78,7 @@ def test_remove_from_list():
     my_list = ['Learn', 'Python', '!']
     my_list.remove('!')
 
-    assert my_list == ___
+    assert my_list == ['Learn', 'Python']
 
 
 def test_lists_can_sum_up():
@@ -90,7 +90,7 @@ def test_lists_can_sum_up():
 
     my_list = ['learn']
     your_list = ['python']
-    our_list = ___ # попробуйте ввести такие варианты: ['learnpython'], ['learn', 'python'], [['learn'], ['python']]
+    our_list = ['learn', 'python'] # попробуйте ввести такие варианты: ['learnpython'], ['learn', 'python'], [['learn'], ['python']]
 
     assert our_list == my_list + your_list
 
@@ -109,4 +109,4 @@ def test_for_lists_loop():
 
     my_list = ['Python']
     for element in my_list:
-        assert element == ___
+        assert element == 'Python'
