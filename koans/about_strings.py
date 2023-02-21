@@ -7,7 +7,7 @@ def test_string_indexes():
     """
     str1 = 'Hello, world!'
 
-    assert str1[5] == __
+    assert str1[5] == ','
 
 
 def test_string_slice():
@@ -16,7 +16,7 @@ def test_string_slice():
     """
     str1 = 'Hello, world!'
 
-    assert str1[5:9] == __
+    assert str1[5:9] == ', wo'
 
 
 def test_string_for():
