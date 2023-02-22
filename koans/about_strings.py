@@ -29,7 +29,7 @@ def test_string_for():
     for symbol in str1:
         symbol_count += 1
 
-    assert symbol_count == __
+    assert symbol_count == 13
 
 
 def test_string_add():
@@ -38,7 +38,7 @@ def test_string_add():
     """
     str1 = 'Hello, ' + 'world!'
 
-    assert str1 == __
+    assert str1 == 'Hello, world!'
 
 
 def test_string_add_extra():
@@ -48,7 +48,7 @@ def test_string_add_extra():
     str1 = 'Hello, '
     str1 += 'world!'
 
-    assert str1 == __
+    assert str1 == 'Hello, world!'
 
 
 def test_string_convert_int():
@@ -57,7 +57,7 @@ def test_string_convert_int():
     """
     str1 = str(123)
 
-    assert str1 == __
+    assert str1 == '123'
 
 
 def test_string_add_int():
@@ -66,7 +66,7 @@ def test_string_add_int():
     """
     str1 = 'Hello, ' + str(123)
 
-    assert str1 == __
+    assert str1 == 'Hello, 123'
 
 
 def test_string_len():
@@ -75,7 +75,7 @@ def test_string_len():
     """
     str1 = len('Hello, ')
 
-    assert str1 == __
+    assert str1 == 7
 
 
 def test_string_split():
@@ -85,7 +85,7 @@ def test_string_split():
     str1 = 'Hello, world! Hello, everyone!'
     splited_str = str1.split(' ')
 
-    assert [__, __, __, __] == splited_str
+    assert ['Hello,', 'world!', 'Hello,', 'everyone!'] == splited_str
 
 
 def test_string_join():
@@ -94,7 +94,7 @@ def test_string_join():
     """
     str1 = '! '.join(['Hello', 'world', 'Hello', 'everyone'])
 
-    assert str1 == __
+    assert str1 == 'Hello! world! Hello! everyone'
 
 
 def test_string_methods():
