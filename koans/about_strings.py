@@ -102,11 +102,11 @@ def test_string_methods():
         У строки есть методы для приведения некоторых ее символов в разные регистры
     """
 
-    assert __ == 'hello'.capitalize()
-    assert __ == 'hello'.upper()
-    assert __ == 'Hello World'.lower()
-    assert __ == 'hello world'.title()
-    assert __ == 'HeLlo wORld'.swapcase()
+    assert 'Hello' == 'hello'.capitalize()
+    assert 'HELLO' == 'hello'.upper()
+    assert 'hello world' == 'Hello World'.lower()
+    assert 'Hello World' == 'hello world'.title()
+    assert 'hElLO WorLD' == 'HeLlo wORld'.swapcase()
 
 
 def test_string_in():
@@ -118,7 +118,7 @@ def test_string_in():
     find_in_str1 = 'world' in str1
 
 
-    assert find_in_str1 == __
+    assert find_in_str1 == True
 
 
 def test_string_format():
@@ -129,7 +129,7 @@ def test_string_format():
     str1 = 'Hello, {}! {}'
     str2 = str1.format(123, 'Hello')
 
-    assert str2 == __
+    assert str2 == 'Hello, 123! Hello'
 
 
 def test_string_empty():
