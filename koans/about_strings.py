@@ -141,10 +141,10 @@ def test_string_empty():
     str3 = 'hello'
 
     empty_string = not str1
-    assert empty_string == __
+    assert empty_string == True
 
     empty_string = str1 or str2 or not str3
-    assert empty_string == __
+    assert empty_string == False
 
 
 def test_string_compare():
@@ -155,10 +155,10 @@ def test_string_compare():
     str2 = 'Hello, ' + 'world!'
 
     string_compare = str1 == str2
-    assert string_compare == __
+    assert string_compare == True
 
     string_compare = 'AAA' < 'AAB'
-    assert string_compare == __
+    assert string_compare == True
 
     string_compare = 'aAA' < 'AAB'
-    assert string_compare == __
+    assert string_compare == False
