@@ -9,7 +9,7 @@ def test_format_simple():
 
     str1 = 'Hello, {}! {}'
     str2 = str1.format('world', 123)
-    assert str2 == 'Hello, world! 123'
+    assert str2 == __
 
 
 def test_format_indeces():
@@ -18,10 +18,10 @@ def test_format_indeces():
     """
 
     str1 = '{1} {0}'.format('a', 'b')
-    assert str1 == 'b a'
+    assert str1 == __
 
     str1 = '{1} {0} {1}'.format('a', 'b')
-    assert str1 == 'b a b'
+    assert str1 == __
 
 
 def test_format_named():
@@ -30,11 +30,11 @@ def test_format_named():
     """
 
     str1 = 'name: {name}, city: {place}'.format(name='John Smith', place='NY')
-    assert str1 == 'name: John Smith, city: NY'
+    assert str1 == __
 
     person = {'name': 'John Smith', 'place': 'NY'}
     str1 = 'name: {name}, city: {place}'.format(**person)
-    assert str1 == 'name': 'John Smith', 'city': 'NY'
+    assert str1 == __
 
 
 def test_format_attributes():
