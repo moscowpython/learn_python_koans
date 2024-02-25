@@ -9,7 +9,7 @@ def test_can_sum_up():
         Если использовать запятую, всё сломается.
     """
 
-    assert 2.5 + 1.2 == __
+    assert 2.5 + 1.2 == 3.7
 
 
 def test_can_assign_to_variables():
@@ -18,7 +18,7 @@ def test_can_assign_to_variables():
     """
     a = 2.5
     b = 3.8
-    assert b - __ == a
+    assert b - 1.3 == a
 
 
 def test_can_remove_real_part():
@@ -26,7 +26,7 @@ def test_can_remove_real_part():
         У вещественных чисел можно удалять дробную часть и превращать их в целые.
     """
     a = 2.1
-    assert int(a) == __
+    assert int(a) == 2
 
 
 def test_has_rounding_problems():
@@ -36,11 +36,11 @@ def test_has_rounding_problems():
         Так работает из-за того, как числа представляются в памяти.
     """
     a = 0.1
-    assert a + 0.2 == __  # подсказка: тут будет не 0.3
+    assert a + 0.2 == 0.30000000000000004  # подсказка: тут будет не 0.3
 
 
 def test_can_miss_leading_zero():
     """
         Если у вещественного числа чцелая часть – ноль, то её можно не писать.
     """
-    assert .5 * 2 == __
+    assert .5 * 2 == 1
